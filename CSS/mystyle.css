@@ -1,0 +1,722 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 确定版心 */
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+/* 所有li去除圆点 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 头部设计开始 */
+.header {
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+.header-first {
+    width: 1200px;
+    margin: auto;
+    padding-top: 7px;
+}
+
+.logo {
+    float: left;
+    width: 34px;
+    height: 34px;
+}
+
+.mylogo {
+    float: left;
+    width: 200px;
+    height: 34px;
+    color: #666666;
+    font-size: 28px;
+}
+
+/* 导航栏设计开始 */
+.lnav-box,
+.rnav-box {
+    float: left;
+    height: 35px;
+    display: block;
+    margin-left: -42px;
+    margin-top: -35px;
+}
+
+.lnav-box li,
+.rnav-box li {
+    float: left;
+    margin: 0 5px;
+    list-style: none;
+    width: 50px;
+    height: 35px;
+}
+
+.lnav-box .box,
+.rnav-box .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .4s;
+}
+
+.lnav-box .box a,
+.rnav-box .box a {
+    text-decoration: none;
+    color: #666;
+}
+
+.lnav-box .box:hover {
+    transform: rotateX(90deg);
+}
+
+.lnav-box .front,
+.lnav-box .bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    color: #666;
+}
+
+.lnav-box .front {
+    z-index: 1;
+    transform: translateZ(17.5px);
+}
+
+.lnav-box .bottom {
+    /* transform: rotateX(-90deg);
+    transform: translateY(17.5px); */
+    /* 我们如果有移动或者其他样式那么我们要先移动后旋转 */
+    transform: translateY(17.5px) rotateX(-90deg);
+    color: orange;
+}
+
+.rnav-box {
+    float: left;
+    margin-left: 12px;
+    margin-top: -28px;
+}
+
+.rnav-box li a:hover {
+    color: orange;
+}
+
+/* 导航栏设计结束 */
+.search {
+    float: left;
+    width: 470px;
+    height: 34px;
+    margin-left: 146px;
+}
+
+.search input {
+    outline: none;
+    float: left;
+    width: 398px;
+    height: 34px;
+    border: 1px solid #f6f7f8;
+    border-right: 0;
+    border-radius: 16px 0 0 16px;
+    background-color: #f6f7f8;
+    color: #757575;
+    font-size: 14px;
+    padding-left: 18px;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 36px;
+    border: 0;
+    border-radius: 0 16px 16px 0;
+    background-image: url(../images/fa-search.png);
+}
+
+.user {
+    float: right;
+}
+
+.user img {
+    float: left;
+    width: 34px;
+    height: 34px;
+}
+
+.user .register {
+    float: left;
+    margin-right: 33px;
+    margin-top: 8px;
+    padding: 0 5px;
+    border: 1px solid #666666;
+    border-radius: 10px;
+}
+
+.user .register a {
+    color: #666;
+}
+
+.user .register a:hover {
+    color: orange;
+}
+
+/* 头部设计结束 */
+
+/* banner设计开始 */
+.banner {
+    margin-top: 5px;
+    height: 600px;
+}
+
+.internal {
+    /* 子绝父相 */
+    position: relative;
+    width: 1200px;
+    height: 600px;
+}
+
+.banner .item {
+    display: none;
+    /*隐藏元素*/
+    position: absolute;
+    /* 绝对定位*/
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;
+}
+
+.lunbo {
+    width: 1200px;
+    height: 600px;
+}
+
+/*左右按钮的属性设置*/
+.lr-tab .btn {
+    position: absolute;
+    top: 300px;
+    font-size: 28px;
+    color: rgba(0, 0, 0, .3);
+}
+
+.lr-tab .left {
+    left: 190px;
+    background-position-x: -83px;
+}
+
+.lr-tab .right {
+    right: 0px;
+    background-position-x: -125px;
+}
+
+/*左右按钮触碰事件*/
+.lr-tab .left:hover {
+    background-position-x: 0px;
+    color: orange;
+}
+
+.lr-tab .right:hover {
+    background-position-x: -41px;
+    color: orange;
+}
+
+/*圆形按钮属性设定*/
+.tab-btn {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 120px;
+    height: 30px;
+    top: 570px;
+
+}
+
+.tab-btn .btn {
+    float: left;
+    width: 6px;
+    height: 6px;
+    background: #868686;
+    border: 2px solid #c3c3c3;
+    /*边框*/
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+/*圆形按钮触碰事件*/
+.tab-btn .btn:hover {
+    background: #e4e4e4;
+    border-color: #7f7f7f;
+}
+
+.tab-btn .active {
+    background: #e4e4e4;
+    border-color: #7f7f7f;
+}
+
+.banner .subnav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.subnav .diversity {
+    width: 190px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    color: #ffffff;
+}
+
+.subnav ul li {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 20px;
+}
+
+.subnav ul li a {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.subnav ul li a span {
+    float: right;
+    line-height: 46px;
+}
+
+.subnav ul li:hover {
+    padding-left: 30px;
+    transition: padding .6s;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.subnav-itd:hover .subnav-mask {
+    display: block;
+}
+
+/* 侧边栏右侧盒子 */
+.subnav .subnav-mask {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 42px;
+    left: 218px;
+    width: 950px;
+    height: 514px;
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    font-size: 15px;
+}
+
+.subnav .subnav-mask .photo {
+    float: right;
+    width: 227px;
+    height: 204px;
+    margin-top: 10px;
+    border: 1px solid #7f7f7f;
+    border-right: none;
+}
+
+.subnav .subnav-mask .photo img {
+    width: 100%;
+    height: 147px;
+    display: block;
+}
+
+.subnav .subnav-mask .photo span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* banner设计结束 */
+
+/* goods设计开始 */
+.goods {
+    height: 60px;
+    margin-top: 9px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+    /* 会继承给子元素让子元素居中显示 */
+    line-height: 60px;
+}
+
+.goods h3 {
+    font-size: 16px;
+    float: left;
+    margin: 0 35px;
+    color: #00a4ff;
+}
+
+.goods ul {
+    float: left;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    font-size: 16px;
+    padding: 0 35px;
+    border-left: 1px solid #bfbfbf;
+    color: #050505;
+}
+
+.goods .mod {
+    font-size: 14px;
+    float: right;
+    margin-right: 28px;
+    color: #00a4ff;
+}
+
+/* goods设计结束 */
+
+/* box设计开始 */
+.box {
+    margin-top: 35px;
+}
+
+.box-hd {
+    height: 42px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: #494949;
+}
+
+.box-hd a {
+    float: right;
+    margin-top: 12px;
+    margin-right: 31px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+/* 这里将ul调到一次能装五个盒子那么这里的第五个和第十个li就不用使用margin-right:0来覆盖边距了 */
+.box-bd ul {
+    width: 1225px;
+}
+
+.box-bd ul li {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 271.5px;
+    margin-right: 12.5px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.box-bd ul li .photo img {
+    width: 100%;
+}
+
+.box-bd ul li>img {
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    right: -4px;
+}
+
+/* box设计结束 */
+
+/* 新话速递盒子设计开始*/
+.photo {
+    position: relative;
+    width: 230px;
+    height: 154.5px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.mask {
+    /* 隐藏遮罩层 */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4) url(../images/arr.png) no-repeat center;
+}
+
+/* 当我们鼠标经过了 视频这个盒子，就让里面遮罩层显示出来 */
+.photo:hover .mask {
+    /* 而是显示元素 */
+    display: block;
+    cursor: pointer;
+}
+
+.text {
+    height: 67px;
+    margin-left: 25px;
+    margin-right: 20px;
+    padding: 25px 0;
+}
+
+.text h6 {
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.text p {
+    float: left;
+    margin-top: 17px;
+    height: 15px;
+    font-size: 12px;
+}
+
+.text .a {
+    color: #ff7c2d;
+}
+
+.text .b {
+    color: #999999;
+    padding: 0 12px;
+}
+
+.text .c {
+    color: #999999;
+}
+
+/* 新话速递盒子设计结束*/
+
+/* 新漫速看设计开始 */
+.introduction {
+    margin-top: 15px;
+}
+
+.introduction-hd {
+    height: 65px;
+    line-height: 65px;
+    overflow: hidden;
+}
+
+.introduction-hd h3 {
+    float: left;
+    width: 230px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #494949;
+}
+
+.introduction-hd .all {
+    float: right;
+    margin-bottom: 26px;
+    margin-right: 31px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.introduction-bd {
+    height: 350px;
+}
+
+.introduction-bd ul {
+    width: 1225px;
+}
+
+.introduction-bd ul li {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 350px;
+    margin-right: 12.5px;
+    transition: all 0.6s;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.introduction-bd ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.introduction-bd ul li .new {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    z-index: 2;
+    top: 6px;
+    right: -4px;
+}
+
+.introduction-bd ul li:hover {
+    border: 1px solid orange;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* 新漫速看设计结束 */
+
+/* footer设计开始 */
+.footer {
+    margin-top: 20px;
+    height: 418px;
+    background-color: #ffffff;
+}
+
+.footer .w {
+    padding-top: 35px;
+}
+
+.footer .left {
+    float: left;
+}
+
+
+.footer .left p {
+    font-size: 12px;
+    margin: 20px 0 15px;
+    color: #666666;
+}
+
+.footer .left .app {
+    display: block;
+    width: 118px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 36px;
+}
+
+.footer .right {
+    float: right;
+}
+
+.footer .right dl {
+    float: left;
+    margin-left: 100px;
+}
+
+.footer .right dl dt {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.footer .right dl dd a {
+    font-size: 12px;
+    color: #333333;
+}
+
+/* footer设计结束 */
+
+/* 右边工具栏开始 */
+.sidenav {
+    position: fixed;
+    top: 100px;
+    right: 0;
+}
+
+.sidenav ul li {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    list-style: none;
+    border: 1px solid #F5F5F5;
+}
+
+.sidenav ul li a {
+    text-decoration: none;
+    color: #9F9F9F;
+}
+
+.sidenav ul li a span,
+.sidenav ul li a p {
+    display: block;
+    margin: 16px auto;
+    text-align: center;
+}
+
+.sidenav ul li a p {
+    font-size: 24px;
+}
+
+.sidenav ul li a span {
+    font-size: 17px;
+}
+
+.sidenav ul li a:hover {
+    color: orange;
+}
+
+.contact:hover .leftcode {
+    display: block;
+}
+
+.leftcode {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    right: 110px;
+    width: 160px;
+    height: 188px;
+    background-color: #fff;
+    border: 1px solid #F5F5F5;
+}
+
+.leftcode img {
+    width: 100px;
+    height: 100px;
+    margin: 30px 30px 17px 30px;
+}
+
+.leftcode p {
+    width: 96px;
+    text-align: center;
+    line-height: 18px;
+    margin: auto;
+    color: #9f9f9f;
+}
+
+/* 右边工具栏结束 */
